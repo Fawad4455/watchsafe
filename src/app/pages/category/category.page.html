@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input type="text" placeholder="Enter Category" [(ngModel)]="catName"></ion-input>
+    <div class="item-note">
+      <ion-button (click)="addCat()"><ion-icon name="add"></ion-icon></ion-button>
+    </div>
+  </ion-item>
+  <div padding>
+    <ion-list>
+      <ion-item *ngFor="let todo of taskList; let i = index">
+        {{todo}}
+        <div class="item-note">
+          <ion-button (click)="updateCat(i)">
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+          <ion-button (click)="deleteTask(i)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-app>
+  <ion-header >
+    <ion-toolbar>
+      <ion-title>
+        Watch Safe
+      </ion-title>
+      <ion-button slot="start" fill="outline">
+        <ion-menu-button>
+        </ion-menu-button>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+    <ion-menu side="start" menu-id="custom" class="my-custom-menu" content-id="main">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item  (click)="navigateToUrl('/home')" >Watch List</ion-item>
+         <!-- <ion-item (click)="navigateToUrl('/category')">Category</ion-item>-->
+          <ion-item (click)="navigateToUrl('/admin')">Restrict Area</ion-item>
+          <ion-item (click)="navigateToUrl('/login')">Set Password</ion-item>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+    <div class="ion-page" id="main">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu - Basic</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-button expand="block"></ion-button>
+        <ion-button expand="block"></ion-button>
+        <ion-button expand="block"></ion-button>
+      </ion-content>
+    </div>
+
+
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

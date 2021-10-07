@@ -1,0 +1,30 @@
+<ion-content style="margin: 30px;" [fullscreen]="true">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Admin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="openYoutube()" color="primary" expand="block">Open Youtube</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item-sliding size="12" *ngFor="let vid of video">
+      <ion-item>
+          <ion-card  style="margin-inline:26px;" (click)="playVideo(vid)">
+            <iframe width="auto" height="auto" [src]="vid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </ion-card>
+      </ion-item>
+      <ion-item-options>
+        <button  (click)="removeItem(vid)"><icon trash></icon> Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+</ion-content>

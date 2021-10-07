@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 style="text-align: center;">Setup Password</h1>
+
+  <ion-item lines="full">
+    <ion-label position="floating">User Name</ion-label>
+    <ion-input  type="input"   [(ngModel)]="userName" (ionChange)="onNameChange($event)"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input  type="password"   [(ngModel)]="password" (ionChange)="onpasswordChange($event)"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input type="password"   [(ngModel)]="cPassword" (ionChange)="onCpasswordChange($event)"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="SavePassword()" color="primary" expand="block">Save</ion-button>
+  <ion-row text-center>
+    <div >Do you want to  <a routerLink='/change-password'>Change Password ?</a></div>
+  </ion-row>
+</ion-content>

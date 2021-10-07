@@ -1,0 +1,26 @@
+<style>
+    .ytp-large-play-button {
+        width: 1px !important;
+    }
+</style>
+<ion-content style="margin: 30px;" [fullscreen]="true">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Home</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-row>
+      <ion-col size="12" *ngFor="let vid of video">
+      <ion-card class="videoCard"  (click)="playVideo(vid)">
+          <div class="upperLayer"></div>
+          <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" id="posts"  [src]="vid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </ion-card>
+    </ion-col>
+
+
+    </ion-row>
+
+
+</ion-content>
